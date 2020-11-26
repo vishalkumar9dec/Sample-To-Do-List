@@ -46,7 +46,6 @@ app.post("/", function(req, res) {
     } else {
         items.push(item);
         db.insertData(inputData);
-
         res.redirect("/");
     }
 
