@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const date = require(__dirname + "/date.js");
-// const db = require(__dirname + "/db-operations.js");
+const db = require(__dirname + "/db-operations.js");
 
 // console.log(date());
 
@@ -45,7 +45,7 @@ app.post("/", function(req, res) {
         res.redirect("/work");
     } else {
         items.push(item);
-        // db.insertData(inputData);
+        db.insertData(inputData);
 
         res.redirect("/");
     }
